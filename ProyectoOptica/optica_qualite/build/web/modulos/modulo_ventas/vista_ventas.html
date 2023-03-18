@@ -1,0 +1,111 @@
+<!-- Inicio de navBar de productos -->
+<main>
+    <div id="layoutSidenav_nav" class="container-fluid">
+        <nav class="navbar navbar-expand-sm my-2" style="border-radius: 50px; background-color: #c94088; padding-top: 0px;padding-bottom: 0px;">
+            <button class="navbar-toggler justify-content-center" type="button" 
+                    data-toggle="collapse" 
+                    data-target="#navbarQualiteSide" 
+                    aria-controls="navbarQualiteSide" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon justify-content-center"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarQualiteSide">
+                <ul class="navbar-nav mt-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" onclick="cargarPrincipal();">
+                            <div class="sb-nav-link-icon">
+                                Inicio
+                                <i class="fas fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" onclick="cargarModuloVentaProductos();" style="cursor: pointer;">
+                            <div class="sb-nav-link-icon">
+                                Ventas de productos
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" onclick="cargarModuloVentaPresupuestoLC();" style="cursor: pointer;">
+                            <div class="sb-nav-link-icon">
+                                Venta de lentes de contacto
+                                <i class="fas fa-eye" ></i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" onclick="cargarModuloVentaPresupuestoLentes();" style="cursor: pointer;">
+                            <div class="sb-nav-link-icon">
+                                Venta de lentes
+                                <i class="fas fa-glasses"></i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" style="cursor: pointer;">
+                            <div class="sb-nav-link-icon">
+                                Examen de la vista
+                                <i class="fas fa-eye-dropper"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</main> <!-- Fin de navBar de productos -->
+
+<!-- Inicio de zona de conenido inicial de productos -->
+<main>
+
+    <!-- Inicio de zona de cartas -->
+    <div class="container-fluid" id="layoutSidenav_content_producto">
+
+        <div class="row" >
+            <div class="col-12" style="text-align: center;">
+                <h1 class="">Selecciona un producto</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 my-3" id="tarjeta" onclick="cargarModuloAccesorios();">
+                <div class="card">
+                    <img src="img/accesorios.jpeg" class="card-img-top img-fluid" alt="" >
+                    <div class="card-body">
+                        <h5 class="card-title">Accesorios</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 my-3" id="tarjeta" onclick="cargarModuloArmazones();">
+                <div class="card">
+                    <img src="img/armazones_1.jpg" class="card-img-top img-fluid" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Armazones</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 my-3" id="tarjeta" onclick="cargarModuloLentesContacto();">
+                <div class="card">
+                    <img src="img/contactLenses.jpg" class="card-img-top img-fluid" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Lentes de contacto</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 my-3" id="tarjeta" onclick="cargarModuloSoluciones();">
+                <div class="card">
+                    <img src="img/soluciones.jpg" class="card-img-top img-fluid" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Soluciones</h5>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Fin de zona de cartas -->
+</main> <!-- Fin de zona de conenido inicial de productos -->

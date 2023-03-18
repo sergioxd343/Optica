@@ -1,0 +1,72 @@
+[
+    {
+        "NUE": "MAM03",
+        "Nombre": "Saturnino",
+        "ApellidoPat": "Mayol",
+        "ApellidoMat": "Montalbán",
+        "Genero": "Masculino",
+        "RFC": "MAOS820312GR3",
+        "NumeroMovil": "4777941169",
+        "NumeroCasa": "4773782276",
+        "CorreoElectronico": "zastenomlu@vusra.com",
+        "Usuario": "Saturnino Mayol",
+        "Contraseña": "NOMAAN362",
+        "Estatus": "Activo"
+    },
+    {
+        "NUE": "MUZ31",
+        "Nombre": "Ofelia",
+        "ApellidoPat": "Mulet",
+        "ApellidoMat": "Zaragoza",
+        "Genero": "Femenino",
+        "RFC": "MUAO78521",
+        "NumeroMovil": "4776683115",
+        "NumeroCasa": "4770493950",
+        "CorreoElectronico": "kayoyiw513@altpano.com",
+        "Usuario": "Ofelia Mulet",
+        "Contraseña": "IAMUZA542",
+        "Estatus": "Activo"
+    },
+    {
+        "NUE": "ANB641",
+        "Nombre": "Mateo",
+        "ApellidoPat": "Antón",
+        "ApellidoMat": "Bertrán",
+        "Genero": "Masculino",
+        "RFC": "ANEM850730GT4",
+        "NumeroMovil": "4775576264",
+        "NumeroCasa": "4773286044",
+        "CorreoElectronico": "braeden58@gmail.com",
+        "Usuario": "Mateo Antón",
+        "Contraseña": "EOANAN238",
+        "Estatus": "Activo"
+    },
+    {
+        "NUE": "ABG25",
+        "Nombre": "Candela",
+        "ApellidoPat": "Abellán",
+        "ApellidoMat": "Granados",
+        "Genero": "Femenino",
+        "RFC": "ABAC650201VF4",
+        "NumeroMovil": "4771302451",
+        "NumeroCasa": "4779188795",
+        "CorreoElectronico": "Candy.Abellan@yahoo.com",
+        "Usuario": "Candela Abellán",
+        "Contraseña": "LAABOS235",
+        "Estatus": "Activo"
+    },
+    {
+        "NUE": "GAV32",
+        "Nombre": "Adela",
+        "ApellidoPat": "Garcia",
+        "ApellidoMat": "Vardejo",
+        "Genero": "Femenino",
+        "RFC": "GAAA760321LR5",
+        "NumeroMovil": "4773625927",
+        "NumeroCasa": "47798674532",
+        "CorreoElectronico": "Adevardejo@outlook.com",
+        "Usuario": "Adela Garcia",
+        "Contraseña": "LAGAJO483",
+        "Estatus": "Activo"
+    }
+]

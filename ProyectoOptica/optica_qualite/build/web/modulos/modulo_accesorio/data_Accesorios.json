@@ -1,0 +1,47 @@
+[
+    {
+        "id" : "OQ-1",
+        "nombre" : "Ganchos antideslizantes",
+        "marca" : "AGV",
+        "precioCom" : 120,
+        "precioVen" : 147,
+        "existencias" : 20,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-2",
+        "nombre" : "ClipOn Leon",
+        "marca" : "Ben & Frank",
+        "precioCom" : 500,
+        "precioVen" : 900,
+        "existencias" : 36,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-3",
+        "nombre" : "Silvia Portalente",
+        "marca" : "Miguel Petacas",
+        "precioCom" : 90,
+        "precioVen" : 130,
+        "existencias" : 40,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-4",
+        "nombre" : "HDCrafter E001 Cremallera",
+        "marca" : "Oem",
+        "precioCom" : 220,
+        "precioVen" : 280,
+        "existencias" : 15,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-5",
+        "nombre" : "Ganchos antideslizantesToallas pre-húmedas anti-empañantes",
+        "marca" : "Opti Clear",
+        "precioCom" : 30,
+        "precioVen" : 80,
+        "existencias" : 50,
+        "estatus" : "Activo"
+    }
+]

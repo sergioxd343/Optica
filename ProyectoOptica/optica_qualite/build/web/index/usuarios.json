@@ -1,0 +1,26 @@
+[
+    {
+        "usuario" : "Salvador",
+        "contraseña" : "Pepeshava_02" 
+    },
+    {
+        "usuario" : "Ivan",
+        "contraseña" : "12345678"
+    },
+    {
+        "usuario" : "Jose Juan",
+        "contraseña" : "Torthugo"
+    },
+    {
+        "usuario" : "Fernando",
+        "contraseña" : "Ferihuano"
+    },
+    {
+        "usuario" : "Daniel",
+        "contraseña" : "Pollitos"
+    },
+    {
+        "usuario" : "Root",
+        "contraseña" : "root"
+    }
+]

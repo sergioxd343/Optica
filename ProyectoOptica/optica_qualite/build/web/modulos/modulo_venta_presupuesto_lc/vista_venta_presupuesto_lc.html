@@ -1,0 +1,273 @@
+<main>
+    <!-- Inicio de contenido-->
+    <div class="container-fluid px-4">
+        <p class="h2 text-bold bg-transparent mt-2 border-0">Ventas de lentes de contacto</p>
+
+    </div> <!-- Fin de contenido-->
+
+    <!--Inicio de la parte de la tabla-->
+
+
+
+
+    <div class="container-fluid card my-3 border-bottom">
+
+        <!--Inicio de encabezado de tabla-->
+        <div class="row">
+            <div class="col-12 mt-2 mb-2">
+                <div class="card">
+
+                    <div class="card-body">
+                        <!--Inicio de la parte de la tabla-->
+                        <div class="card-header" style="background-color: #112A45; color: white">
+                            <div class="col-12">
+                                Clientes
+                            </div>
+                        </div>
+                        <div class="container-fluid card mx-auto border-bottom" style="display: block;">
+                            <!--Inicio de zona de búsqueda y filtro-->
+                            <!-- Inicio de zona de búsqueda -->
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 mt-2 mb-2">
+                                    <input type="text" placeholder="Buscar" name="txtBusquedaClientes" id="txtBusquedaClientes" class="form-control">
+                                </div>
+                                <div class="col-sm-6 col-md-6 mt-2 mb-2">
+                                    <button class="btn btn-outline-secondary btn-lg w-75" id="btnBuscarClientes" 
+                                            data-toggle="collapse" data-target="#collapseClientes" aria-expanded="false" aria-controls="collapseClientes"
+                                            onclick="moduloVentaLenteContacto.mostrarCampoBusquedaClientes();"> Buscar
+                                    </button>
+                                </div>
+                            </div> <!--Fin de zona de búsqueda y filtro-->
+
+                            <!--Inicio de encabezado de tabla-->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="collapse" id="collapseClientes">
+                                        <div class="card mb-2" id="clientes">
+
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table" id="tablaClientes">
+                                                        <thead style="background-color: #112A45; color: white">
+                                                            <tr>
+                                                                <th>Numero unico de Cliente</th>
+                                                                <th>Nombre</th>
+                                                                <th>Apellido Paterno</th>
+                                                                <th>Apellido Materno</th>
+                                                                <th>Telefono movil</th>
+                                                                <th>Correo Electronico</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tblClientes">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div> <!--Fin de encabezado de tabla-->
+
+                            <!--Inicio de tabla productos-->
+
+
+                        </div> <!--Fin de tabla productos-->
+                        <div class="table-responsive">
+                            <table class="table" id="tablaClienteSeleccionado">
+                                <thead style="background-color: #112A45; color: white">
+                                    <tr>
+                                        <th>Numero unico de Cliente</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido Paterno</th>
+                                        <th>Apellido Materno</th>
+                                        <th>Telefono movil</th>
+                                        <th>Correo Electronico</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblClienteSeleccionado">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-header" style="background-color: #112A45; color: white">
+                            <div class="col-12">
+                                Examen de la vista
+                            </div>
+                        </div>
+                        <select class="form-select" name="selectEV" id="selectEV">
+                            <option value="seleccionarExamen" onselect="moduloVentaLenteContacto.actualizarBotones();" selected="" disabled="">Selecciona primero un cliente</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-2 mb-3">
+                <div class="card">
+
+                    <div class="card-body" id="ventaLentesContacto">
+                        <div class="row">
+                            <form id="formSolucion" name="formSolucion">
+                                <div class="list-group list-group-flush border-0 container-md">
+                                    <!-- Inicio de dentificadores -->
+                                    <li class="list-group-item border-0">
+                                        <input type="text" id="txtCodigoBarras" name="txtCodigoBarras" hidden value="">
+                                        <input type="text" id="txtIdSolucion" name="txtIdSolucion" hidden value="">
+                                        <input type="text" id="txtIdProducto" name="txtIdProducto" hidden value="">
+                                    </li> <!-- Fin de dentificadores -->
+
+                                    <!-- Inicio de datos del solución -->
+                                    <li class="list-group-item border-0 container-sm">
+                                        <div class="card">
+
+
+                                            <div class="card-body border-0 row justify-content-center">
+                                                <!-- Nombre -->
+                                                <div class="col-sm-12 elementoForm">
+                                                    <div class="card-header" style="background-color: #112A45; color: white">
+                                                        <div class="col-12">
+                                                            Lente de contacto 
+                                                        </div>
+                                                    </div>
+                                                    <select class="form-select" name="selectLC" id="selectLC">
+                                                        <option value="SeleccionarLC" selected="" disabled="">Selecciona el lente de contacto</option>
+                                                    </select>
+                                                </div>
+                                                <!-- Marca -->
+                                                <div class="col-sm-4 elementoForm">
+                                                    <label for="txtPrecioUnitario" class="form-label">Precio Unitario:</label>
+                                                    <input type="text" id="txtPrecioUnitario" name="txtPrecioUnitario" class="form-control" minlength="2" disabled required>
+                                                </div>
+                                                <!-- Precio de compra -->
+                                                <div class="col-sm-4 elementoForm">
+                                                    <label for="txtCantidad" class="form-label">Cantidad:</label>
+                                                    <input type="number" min="1" step="0.01" id="txtCantidad" name="txtCantidad" class="form-control" placeholder="Ingresar cantidad" required="" disabled>
+                                                </div>
+                                                <!-- Existencias -->
+                                                <div class="col-sm-3 elementoForm">
+                                                    <label for="txtDescuento" class="form-label" >Descuento:</label>
+                                                    <input type="number" min="1" step="1" class="form-control" id="txtDescuento" name="txtDescuento" placeholder="Ingresar descuento" disabled required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li> <!-- Fin de datos del accesorio -->
+                                </div> <!-- Fin formulario -->
+                            </form> <!-- Fin del cuerpo del formulario -->
+
+                            <!-- zona de botones -->
+                            <div class="card container-fluid bg-transparent justify-content-center py-3">
+                                <div class="row justify-content-center">
+                                    <div class="col-sm-6 mb-3">
+                                        <button class="btn btn-outline-secondary btn-lg" id="btnSaveLC" 
+                                                onclick="moduloVentaLenteContacto.guardarLC();">Guardar Lente de contacto
+                                        </button>
+                                    </div>
+                                </div>
+                            </div><!-- Fin de la zona de botones -->
+                            <div class="container-fluid m-0" id="areaContenido" style="display: none;"> 
+                                <div class="col-md-6 my-3" style="display: none;">
+                                    <button type="button" id="letreroFormulario" 
+                                            class="btn btn-outline-dark" 
+                                            onclick="moduloVentaLenteContacto.setDetalleVisible();">
+                                        Agregar.
+                                    </button>
+                                </div>
+
+
+                            </div> <!-- Fin del formulario -->
+                            <div class="table-responsive" id="tblPresupuestoLC">
+                                <table class="table">
+                                    <thead style="background-color: #112A45; color: white">
+                                        <tr>
+                                            <th>Codigo de barras</th>
+                                            <th>Nombre</th>
+                                            <th>Precio unitario</th>
+                                            <th>Cantidad</th>
+                                            <th>Descuento</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tblVentaPresupuestoLC">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-2 mb-3">
+                <div class="card">
+                    <div class="card-header" style="background-color: #112A45; color: white">
+                        <div class="col-12">
+                            <i class="fa-solid fa-cart-shopping"></i> Total
+                        </div>
+                    </div>
+                    <div class="card-body" id="totalVenta">
+                        <div class="row" style="display: none">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="totalProductos">Lentes de contacto:</label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="totalLC" name="totalLC" disabled>
+                            </div>
+                        </div>
+                        <div class="row" style="display: none">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="subtotalCosto">Subtotal: </label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="subtotalCosto" name="subtotalCosto" disabled>
+                            </div>
+                        </div>
+                        <div class="row" style="display: none">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="descuentoCosto">Descuento: </label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="descuentoCosto" name="descuentoCosto" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="totalCosto">Total: </label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="totalCosto" name="totalCosto" disabled>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div> <!--Fin de encabezado de tabla-->
+
+        <div class="row">
+            <div class="col-6 mt-2 mb-2">
+                <button class="btn btn-outline-success btn-lg w-75" id="btnSave" 
+                        onclick="moduloVentaLenteContacto.agregarVentaPresupuestoLC();"><i class="fa-solid fa-floppy-disk"></i> Guardar
+                </button>
+            </div>
+            <div class="col-6 mt-2 mb-2">
+                <button class="btn btn-outline-primary btn-lg w-75" id="btnClean" 
+                        onclick="moduloVentaLenteContacto.limpiar();"><i class="fa-solid fa-eraser"></i> Limpiar
+                </button>
+            </div>
+        </div>
+
+        <!--Inicio de tabla productos-->
+
+
+    </div> <!--Fin de tabla productos-->
+    <!--JavaScript-->
+    <script src="../js/main.js"></script>
+</main>

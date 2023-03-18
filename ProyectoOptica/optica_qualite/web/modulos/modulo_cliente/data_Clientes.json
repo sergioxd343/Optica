@@ -1,0 +1,62 @@
+[
+    {
+        "NUC": "CAS294",
+        "Nombre": "Rodrigo",
+        "ApellidoPat": "Castañeda",
+        "ApellidoMat": "Sanchez",
+        "Genero": "Masculino",
+        "RFC": "CASAR750327LT2",
+        "NumeroMovil": "4771304707",
+        "NumeroCasa": "",
+        "CorreoElectronico": "caarodrigo@hotmail.com",
+        "estatus": "Activo"
+    },
+    {
+        "NUC": "COP02",
+        "Nombre": "Vito",
+        "ApellidoPat": "Conesa",
+        "ApellidoMat": "Pinto",
+        "Genero": "Masculino",
+        "RFC": "COIV000425LE3",
+        "NumeroMovil": "4773387341",
+        "NumeroCasa": "4779059682",
+        "CorreoElectronico": "coivito@hotmail.com",
+        "estatus": "Activo"
+    },
+    {
+        "NUC": "MAA23",
+        "Nombre": "Cleto",
+        "ApellidoPat": "Marco",
+        "ApellidoMat": "Amaya",
+        "Genero": "Masculino",
+        "RFC": "MAAC930321VF4",
+        "NumeroMovil": "4779237967",
+        "NumeroCasa": "4776438859",
+        "CorreoElectronico": "maacleto@hotmail.com",
+        "estatus": "Activo"
+    },
+    {
+        "NUC": "VEB94",
+        "Nombre": "Fanny",
+        "ApellidoPat": "Verdejo",
+        "ApellidoMat": "Bou",
+        "Genero": "Femenino",
+        "RFC": "VEOF980925AS3",
+        "NumeroMovil": "4779792211",
+        "NumeroCasa": "4771718637",
+        "CorreoElectronico": "veofanny@hotmail.com",
+        "estatus": "Activo"
+    },
+    {
+        "NUC" : "ARF345",
+        "Nombre" : "Sarahí",
+        "ApellidoPat" : "Arteaga",
+        "ApellidoMat" : "Flores",
+        "Genero" : "Femenino",
+        "RFC" : "AROS860420FH4",
+        "NumeroMovil" : "4445816832",
+        "NumeroCasa" : "",
+        "CorreoElectronico" : "arosarahi@hotmail.com",
+        "estatus" : "Activo"
+    }
+]

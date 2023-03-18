@@ -1,0 +1,61 @@
+}<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="Styles/css/mycss.css">
+        <link rel="icon" href="resources/logoQ.png">
+    </head>
+    <body style="background-color: #03102c; width: 100%;" class="justify-content-center">
+        <div class="container-fluid justify-content-center abs-center col-lg-6">
+            <div class="card col-lg-2 mt-lg-5 p-3 mx-lg-5" style="align-self: center; display: flex; width: 600px;">
+                <div class="text-center">
+                    <img src="resources/logoQ.png" class="rounded float-left" alt="" style="height: 100px;"/>
+                    <br><br><br> <h1 style="color: rgb(159, 236, 236); font-family: Arial;"> QUALITE </h1>
+                </div>
+                <form class="p-3">
+                    <!-- Ingresar usuario -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="nombreUsuario">Usuario:</label>
+                        <input type="text" id="txtUsuario" class="form-control" />
+                    </div>
+
+                    <!-- Contraseña -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="contrasenia">Contraseña:</label>
+                        <input type="password" id="txtPassword" required class="form-control" />
+                    </div>
+
+                    <!-- 2 column grid layout for inline styling -->
+                    <div class="row mb-4">
+                        <div class="col d-flex justify-content-center">
+                            <!-- Checkbox -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" required value="" id="ru" checked />
+                                <label class="form-check-label" for="ru"> Recordar usuario </label>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <!-- Simple link -->
+                            <a href="#!">¿Olvidaste tu contraseña?</a>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <!-- Submit button -->
+                        <button type="button" class="btn btn-outline-info btn-block mb-4" onclick="validarSesion()">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+        <script src="Styles/js/bootstrap.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/main.js"></script>
+        <<script src="index/controlador_index.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,52 @@
+[
+    {
+        "id" : "OQ-1",
+        "nombre" : "Renu Advanced",
+        "marca" : "Bausch + Lomb",
+        "descripcion" : "Solución multipropósito de Bausch & Lomb para el cuidado de los lentes de contacto.",
+        "precioCompra" : 200,
+        "precioVenta" : 255,
+        "existencias" : 20,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-2",
+        "nombre" : "Solución Biotrue",
+        "marca" : "Bausch + Lomb",
+        "descripcion" : "Solución multipropósito Bioinspirada en la biología de tus ojos, para lentes de contacto blandos, incluyendo lentes de hidrogel de silicona.",
+        "precioCompra" : 220,
+        "precioVenta" : 299,
+        "existencias" : 30,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-3",
+        "nombre" : "Vista Plus",
+        "marca" : "DEVLYN",
+        "descripcion" : "Solución lubricante y re-humectante para lentes de contacto blandos, rígidos y de gas permeable.",
+        "precioCompra" : 20,
+        "precioVenta" : 49,
+        "existencias" : 50,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-4",
+        "nombre" : "Solucion Multi Plus",
+        "marca" : "DEVLYN",
+        "descripcion" : "Solución Estéril isotónica de 360 ml. que contiene un sistema amortiguado de boratos, pluronic, agentes, liquido lubricante y remoprot, preservada con EDTA DISODICO y P.A.P.B.",
+        "precioCompra" : 100,
+        "precioVenta" : 149,
+        "existencias" : 10,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-5",
+        "nombre" : "Solucion desinfectante multiusos",
+        "marca" : "Opti-Free",
+        "descripcion" : "Fórmula exclusiva que elimina los microorganismos que pueden causar infecciones oculares.",
+        "precioCompra" : 150,
+        "precioVenta" : 210,
+        "existencias" : 24,
+        "estatus" : "Activo"
+    }
+]

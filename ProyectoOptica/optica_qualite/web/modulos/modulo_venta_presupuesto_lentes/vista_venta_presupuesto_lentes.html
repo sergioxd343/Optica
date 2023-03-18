@@ -1,0 +1,288 @@
+<main>
+    <!-- Inicio de contenido-->
+    <div class="container-fluid px-4">
+        <p class="h2 text-bold bg-transparent mt-2 border-0">Ventas de lentes de contacto</p>
+        
+    </div> <!-- Fin de contenido-->
+
+    <!--Inicio de la parte de la tabla-->
+
+
+
+
+    <div class="container-fluid card my-3 border-bottom">
+
+        <!--Inicio de encabezado de tabla-->
+        <div class="row">
+            <div class="col-12 mt-2 mb-2">
+                <div class="card">
+                    <div class="card-header" style="background-color: #112A45; color: white">
+                        <div class="col-12">
+                            <i class="fa-solid fa-cart-shopping"></i> Encabezado
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!--Inicio de la parte de la tabla-->
+                        <label class="form-label">Cliente: </label>
+                        <div class="container-fluid card mx-auto border-bottom" style="display: block;">
+                            <!--Inicio de zona de búsqueda y filtro-->
+                            <!-- Inicio de zona de búsqueda -->
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 mt-2 mb-2">
+                                    <input type="text" placeholder="Buscar" name="txtBusquedaClientes" id="txtBusquedaClientes" class="form-control">
+                                </div>
+                                <div class="col-sm-6 col-md-6 mt-2 mb-2">
+                                    <button class="btn btn-outline-primary btn-lg w-75" id="btnBuscarClientes" 
+                                            data-toggle="collapse" data-target="#collapseClientes" aria-expanded="false" aria-controls="collapseClientes"
+                                            onclick="moduloVentaPresupuestoLentes.mostrarCampoBusquedaClientes();"><i class="fa-solid fa-magnifying-glass"></i> Buscar
+                                    </button>
+                                </div>
+                            </div> <!--Fin de zona de búsqueda y filtro-->
+
+                            <!--Inicio de encabezado de tabla-->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="collapse" id="collapseClientes">
+                                        <div class="card mb-2" id="clientes">
+                                            <div class="card-header" style="background-color: #112A45; color: white">
+                                                <div class="col-12">
+                                                    <i class="fa-solid fa-cart-shopping"></i> Clientes
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table" id="tablaClientes">
+                                                        <thead style="background-color: #112A45; color: white">
+                                                            <tr>
+                                                                <th>Numero unico de Cliente</th>
+                                                                <th>Nombre</th>
+                                                                <th>Apellido Paterno</th>
+                                                                <th>Apellido Materno</th>
+                                                                <th>Telefono movil</th>
+                                                                <th>Correo Electronico</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tblClientes">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div> <!--Fin de encabezado de tabla-->
+
+                            <!--Inicio de tabla productos-->
+
+
+                        </div> <!--Fin de tabla productos-->
+                        <label class='form-label' for='tablaClienteSeleccionado'>Cliente seleccionado</label>
+                        <div class="table-responsive">
+                            <table class="table" id="tablaClienteSeleccionado">
+                                <thead style="background-color: #112A45; color: white">
+                                    <tr>
+                                        <th>Numero unico de Cliente</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido Paterno</th>
+                                        <th>Apellido Materno</th>
+                                        <th>Telefono movil</th>
+                                        <th>Correo Electronico</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblClienteSeleccionado">
+                                </tbody>
+                            </table>
+                        </div>
+                        <label class="form-label" for="SelectEV">Examen de la vista </label>
+                        <select class="form-select" name="selectEV" id="selectEV">
+                            <option value="seleccionarExamen" selected="" disabled="">Selecciona primero un cliente</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-2 mb-3">
+                <div class="card">
+                    <div class="card-header" style="background-color: #112A45; color: white">
+                        <div class="col-12">
+                            <i class="fa-solid fa-cart-shopping"></i> Detalles
+                        </div>
+                    </div>
+                    <div class="card-body" id="ventaLentesContacto">
+                        <div class="row">
+                            <div class="col-md-6 my-3">
+                                <button type="button" id="letreroFormulario" 
+                                        class="btn btn-outline-dark" 
+                                        onclick="moduloVentaPresupuestoLentes.setDetalleVisible();">
+                                    Agregar.
+                                </button>
+                            </div>
+                            <div class="container-fluid m-0" id="areaContenido" style="display: none;">
+                                <form id="formSolucion" name="formSolucion">
+                                    <div class="list-group list-group-flush border-0 container-md">
+
+                                        <!-- Inicio de datos del solución -->
+                                        <li class="list-group-item border-0 container-sm">
+                                            <div class="card">
+                                                <div class="card-header fs-5 bg-headerDatos border-0 row">
+                                                    <div class="col-sm-12">
+                                                        <i class="fa-solid fa-mustache"></i> Presupuesto
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-body bg-warningDatos border-0 row justify-content-center">
+                                                    <!-- Nombre -->
+                                                    <div class="col-sm-4 elementoForm">
+                                                        <label for="txtAlturaOblea" class="form-label">Altura de la oblea:</label>
+                                                        <input type="number" id="txtAlturaOblea" name="txtAlturaOblea" class="form-control" minlength="2" required onchange="moduloVentaPresupuestoLentes.actualizarBotonesPresupuesto();">
+                                                    </div>
+                                                    <div class="col-sm-4 elementoForm">
+                                                        <label for="selectMica" class="form-label">Tipo de mica:</label>
+                                                        <select class="form-select" name="selectMica" id="selectMica" onchange="moduloVentaPresupuestoLentes.actualizarBotonesPresupuesto();">
+                                                            <option value="seleccionarMica" selected="" disabled="">Selecciona la mica
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- Marca -->
+                                                    <div class="col-sm-4 elementoForm">
+                                                        <label for="selectMaterial" class="form-label">Material:</label>
+                                                        <select class="form-select" name="selectMaterial" id="selectMaterial" onchange="moduloVentaPresupuestoLentes.actualizarBotonesPresupuesto();">
+                                                            <option value="seleccionarMaterial" selected="" disabled="">Selecciona el material
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- Precio de compra -->
+                                                    <div class="col-sm-4 elementoForm">
+                                                        <label for="selectArmazon" class="form-label">Armazon:</label>
+                                                        <select class="form-select" name="selectArmazon" id="selectArmazon" onchange="moduloVentaPresupuestoLentes.actualizarBotonesPresupuesto();">
+                                                            <option value="SeleccionarArmazon" selected="" disabled="">Selecciona el armazon
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- Existencias -->
+                                                    <div class="col-sm-12 elementoForm">
+                                                        <label for="divTratamientos" class="form-label" >Tratamientos:</label>
+                                                    </div>
+                                                    <div class="col-sm-12 elementoForm" id="divTratamientos">
+                                                        <label for="Tratamientos" class="form-label" >Tratamientos:</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li> <!-- Fin de datos del accesorio -->
+                                    </div> <!-- Fin formulario -->
+                                </form> <!-- Fin del cuerpo del formulario -->
+
+                                <!-- zona de botones -->
+                                <div class="card container-fluid bg-transparent justify-content-center py-3">
+                                    <div class="row justify-content-center">
+                                        <div class="col-sm-6 mb-3">
+                                            <button class="btn btn-outline-success btn-lg" id="btnSavePresupuesto" 
+                                                    onclick="moduloVentaPresupuestoLentes.guardarPresupuesto();">Guardar
+                                            </button>
+                                        </div>
+                                        <div class="col-sm-6 mb-3">
+                                            <button class="btn btn-outline-primary btn-lg" id="btnCleanPresupuesto" 
+                                                    onclick="moduloVentaPresupuestoLentes.limpiarCamposPresupuesto();">Limpiar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div><!-- Fin de la zona de botones -->
+                            </div> <!-- Fin del formulario -->
+                            <div class="table-responsive" id="tblPresupuestoLentes">
+                                <table class="table">
+                                    <thead style="background-color: #112A45; color: white">
+                                        <tr>
+                                            <th>Codigo de barras</th>
+                                            <th>Nombre</th>
+                                            <th>Precio unitario</th>
+                                            <th>Cantidad</th>
+                                            <th>Descuento</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tblVentaPresupuestoLentes">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-2 mb-3">
+                <div class="card">
+                    <div class="card-header" style="background-color: #112A45; color: white">
+                        <div class="col-12">
+                            <i class="fa-solid fa-cart-shopping"></i> Total
+                        </div>
+                    </div>
+                    <div class="card-body" id="totalVenta">
+                        <div class="row">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="totalProductos">Presupuestos:</label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="totalPresupuesto" name="totalPresupuesto" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="subtotalCosto">Subtotal: </label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="subtotalCosto" name="subtotalCosto" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="descuentoCosto">Descuento: </label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="descuentoCosto" name="descuentoCosto" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="totalCosto">Total: </label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="totalCosto" name="totalCosto" disabled>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div> <!--Fin de encabezado de tabla-->
+
+        <div class="row">
+            <div class="col-6 mt-2 mb-2">
+                <button class="btn btn-outline-success btn-lg w-75" id="btnSave" 
+                        onclick="moduloVentaPresupuestoLentes.agregarVentaPresupuestoLentes();"><i class="fa-solid fa-floppy-disk"></i> Guardar
+                </button>
+            </div>
+            <div class="col-6 mt-2 mb-2">
+                <button class="btn btn-outline-primary btn-lg w-75" id="btnClean" 
+                        onclick="moduloVentaPresupuestoLentes.limpiar();"><i class="fa-solid fa-eraser"></i> Limpiar
+                </button>
+            </div>
+        </div>
+
+        <!--Inicio de tabla productos-->
+
+
+    </div> <!--Fin de tabla productos-->
+    <!--JavaScript-->
+    <script src="../js/main.js"></script>
+</main>

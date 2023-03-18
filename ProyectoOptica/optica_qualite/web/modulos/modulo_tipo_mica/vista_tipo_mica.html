@@ -1,0 +1,146 @@
+<main>
+    <!-- Inicio de contenido-->
+    <div class="container-fluid px-4">
+        <p class="h1 text-bold bg-transparent mt-4 border-0">Micas</p>
+
+        <!-- Inicio migajas de Pan y botón-->
+        <div class="row container-md justify-content-between">
+            <nav class="col-md-6 my-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item">
+                        <a onclick="cargarPrincipal();">Inicio</a>
+                    </li>
+                    <li class="breadcrumb-item ">Lentes</li>
+                    <li class="breadcrumb-item active">Micas</li>
+                </ol>
+            </nav>
+            <div class="col-md-6 my-3">
+                <button type="button" id="letreroFormulario" 
+                        class="btn btn-outline-dark" 
+                        onclick="moduloTipoMicas.setDetalleVisible();">
+                    Abrir formulario.
+                </button>
+            </div>
+        </div> <!-- Fin migajas de Pan y botón-->
+
+        <!--Inicio de formulario-->
+        <div class="container-fluid m-0" id="areaContenido" style="display: none;">
+            <form name="formTipoMica" id="formTipoMica">
+                <div class="list-group list-group-flush border-0">
+                    <!-- Inicio de dentificadores -->
+                    <li class="list-group-item border-0">
+                        <input type="text" id="txtIdTipoMica" name="txtIdTipoMica" hidden>
+                    </li> <!-- Fin de dentificadores -->
+
+                    <!-- Inicio de datos del tratamiento -->
+                    <li class="list-group-item border-0 container-md">
+                        <div class="card">
+                            <div class="card-header fs-5 bg-headerContacto border-0 row">
+                                <div class="col-md_12">
+                                    <i class="fa-sharp fa-solid fa-eye"></i> Datos de la mica
+                                </div>
+                            </div>
+                            <div class="card-body bg-warningContacto border-0 row">
+                                <!-- Nombre -->
+                                <div class=" col-md-6 elementoForm">
+                                    <label for="txtNombre" class="form-label">Nombre:</label>
+                                    <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="Ingresar nombre" minlength="2" required>
+                                </div>
+                                <!-- Precio de compra -->
+                                <div class=" col-md-6 elementoForm">
+                                    <label for="txtPrecioCompra" class="form-label">Precio de compra:</label>
+                                    <input type="number" min="1" step="0.01" id="txtPrecioCompra" name="txtPrecioCompra" class="form-control" placeholder="Ingresar precio de compra" required>
+                                </div>
+                                <br/>
+                                <!-- Precio de venta -->
+                                <div class=" col-md-12 elementoForm">
+                                    <label for="txtPrecioVenta" class="form-label">Precio de venta:</label>
+                                    <input type="number" min="1" step="0.01" id="txtPrecioVenta" name="txtPrecioVenta" class="form-control"  placeholder="Ingresar precio de venta">
+                                </div>
+                            </div>
+                        </div>
+                    </li> <!-- Fin de datos del tratamiento -->
+                </div>
+            </form>
+
+            <!-- zona de botones -->
+            <div class="card container-fluid bg-transparent justify-content-center py-3">
+                <div class="row container-sm justify-content-center">
+                    <div class="col-sm-6 mb-3">
+                        <button class="btn btn-outline-success btn-lg" id="btnSave" 
+                                onclick="moduloTipoMicas.guardarTipoMica();">Guardar
+                        </button>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <button class="btn btn-outline-primary btn-lg" id="btnClean" 
+                                onclick="moduloTipoMicas.limpiarCampos();">Limpiar
+                        </button>
+                    </div>
+                </div>
+            </div> <!-- Fin de la zona de botones -->
+        </div> <!-- Fin del formulario -->
+    </div> <!-- Fin de contenido-->
+
+    <!--Inicio de la parte de la tabla-->
+    <div class="container-fluid card mx-auto border-bottom" id="tblTipoMicaCompleta" style="display: block;">
+        <!--Inicio de zona de búsqueda y filtro-->
+        <div class="row container-md container-sm">
+            <div class="col-md-8 col-sm-5 mt-3 mb-3">
+                <input type="text" placeholder="Buscar" name="txtBusqueda" id="txtBusqueda" class="form-control">
+            </div>
+            <div class="col-sm-7 col-md-4 my-3">
+                <button class="btn btn-outline-primary btn-lg w-75" id="btnBuscar" 
+                        onclick="moduloTipoMicas.refrescarTabla();">Buscar
+                </button>
+            </div>
+            <!-- Zona de radioButon para filtrar -->
+            <!-- comment 
+            <div class="col-6">
+                <div class="mt-3 mb-3 mx-5">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="groupRadio" id="radActivo" value="1" onclick="moduloTipoMicas.filtrarTratamiento();" checked>
+                        <label class="form-check-label" for="inlineRadio1">Activos</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="groupRadio" id="radInactivo" value="0" onclick="moduloTipoMicas.filtrarTratamiento();">
+                        <label class="form-check-label" for="inlineRadio2">Inactivos</label>
+                    </div>
+                </div>
+            </div>
+        </div> --><!--Fin de zona de búsqueda y filtro-->
+        </div>
+        <!--Inicio de encabezado de tabla-->
+        <div class="row">
+            <div class="card mb-5">
+                <div class="card-header row" style="background-color: #112A45; color: white">
+                    <div class="col-12">
+                        <i class="fa-light fa-aperture"></i> Micas
+                    </div>
+                </div>
+            </div>
+        </div><!--Fin de encabezado de tabla-->
+
+        <!--Inicio de la tabla micas-->
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table" id="tablaMica">
+                    <thead style="background-color: #112A45; color: white">
+                        <tr>
+                            <th>ID Mica</th>
+                            <th>Nombre</th>
+                            <th>Precio de compra</th>
+                            <th>Precio de venta</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblTipoMica">
+                    </tbody>
+                </table>
+            </div>
+        </div> <!--Fin de tabla micas-->
+
+    </div>
+
+    <!--JavaScript-->
+    <script src="../js/main.js"></script>
+</main>

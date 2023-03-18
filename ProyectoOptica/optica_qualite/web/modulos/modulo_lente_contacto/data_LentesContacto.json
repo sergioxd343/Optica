@@ -1,0 +1,67 @@
+[
+    {
+        "id" : "OQ-1",
+        "imagen" : "../../img/INFUSE.png",
+        "nombre" : "Bausch + Lomb INFUSE®",
+        "marca"  : "Bausch & Lomb",
+        "color" : "Transparentes",
+        "queratometria" : "7.1mm",
+        "tipo" : "Graduados",
+        "precioCom" : 500,
+        "precioVen" : 1500,
+        "existencias" : 15,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-2",
+        "imagen" : "../../img/ONEDAY.jpg",
+        "nombre" : "Biotrue® ONEday",
+        "marca"  : "Bausch & Lomb",
+        "color" : "Transparentes",
+        "queratometria" : "8.6mm",
+        "tipo" : "Graduados",
+        "precioCom" : 500,
+        "precioVen" : 1800,
+        "existencias" : 15,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-3",
+        "imagen" : "../../img/LUNARE.jpg",
+        "nombre" : "LUNARE®",
+        "marca"  : "Bausch & Lomb",
+        "color" : "Verde, azul, miel y gris",
+        "queratometria" : "8.7mm",
+        "tipo" : "Esteticos",
+        "precioCom" : 200,
+        "precioVen" : 900,
+        "existencias" : 30,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-4",
+        "imagen" : "../../img/toric.jpg",
+        "nombre" : "Biofinity® toric",
+        "marca"  : "Biofinity",
+        "color" : "Transparentes",
+        "queratometria" : "7.2",
+        "tipo" : "Graduados",
+        "precioCom" : 300,
+        "precioVen" : 1200,
+        "existencias" : 15,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-5",
+        "imagen" : "../../img/lacelle.jpg",
+        "nombre" : "Lacelle® color lenses",
+        "marca"  : "Bausch & Lomb",
+        "color" : "Jubilee Violet",
+        "queratometria" : "7.4",
+        "tipo" : "Esteticos",
+        "precioCom" : 400,
+        "precioVen" : 1500,
+        "existencias" : 50,
+        "estatus" : "Activo"
+    }
+]

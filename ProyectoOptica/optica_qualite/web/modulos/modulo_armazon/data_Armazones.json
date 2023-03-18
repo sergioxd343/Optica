@@ -1,0 +1,72 @@
+[
+    {
+        "id" : "OQ-1",
+        "imagen" : "../../img/armazon-1.jpg",
+        "nombre" : "armazon 1",
+        "modelo" : "tipo A",
+        "marca" : "RayBan",
+        "color" : "negro",
+        "descripcion" : "armazon de varilla recubierta con plastico duro",
+        "dimensiones" : "13 x 20",
+        "precioCompra" : 150,
+        "precioVenta" : 180,
+        "existencias" : 3,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-2",
+        "imagen" : "../../img/armazon-2.jpg",
+        "nombre" : "armazon 2",
+        "modelo" : "tipo A",
+        "marca" : "RayBan",
+        "color" : "Azul",
+        "descripcion" : "armazon de varilla recubierta con plastico duro",
+        "dimensiones" : "13 x 20",
+        "precioCompra" : 130,
+        "precioVenta" : 170,
+        "existencias" : 7,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-3",
+        "imagen" : "../../img/armazon-3.jpg",
+        "nombre" : "armazon 3",
+        "modelo" : "tipo B",
+        "marca" : "RayBan",
+        "color" : "dorado",
+        "descripcion" : "armazon tipo piloto con varilla reforzada",
+        "dimensiones" : "15 x 23",
+        "precioCompra" : 240,
+        "precioVenta" : 270,
+        "existencias" : 10,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-4",
+        "imagen" : "../../img/armazon-4.jpg",
+        "nombre" : "armazon 4",
+        "modelo" : "tipo B",
+        "marca" : "RayBan",
+        "color" : "plata",
+        "descripcion" : "armazon tipo piloto con varilla reforzada",
+        "dimensiones" : "15 x 23",
+        "precioCompra" : 250,
+        "precioVenta" : 290,
+        "existencias" : 15,
+        "estatus" : "Activo"
+    },
+    {
+        "id" : "OQ-5",
+        "imagen" : "../../img/armazon-5.jpg",
+        "nombre" : "armazon 5",
+        "modelo" : "tipo C",
+        "marca" : "RayBan", 
+        "color" : "rosa", 
+        "descripcion" : "armazon tipo secretaria",
+        "dimensiones" : "34 x 37",
+        "precioCompra" : 270,
+        "precioVenta" : 320,
+        "existencias" : 4,
+        "estatus" : "activo"
+    }
+]

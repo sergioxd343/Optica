@@ -1,0 +1,198 @@
+<main>
+    <!-- Inicio de contenido-->
+    <div class="container-fluid px-4">
+        <p class="h2 text-bold bg-transparent mt-2 border-0">Ventas de productos</p>
+
+        <!-- Inicio migajas de Pan y botón-->
+        <div class="row container-md justify-content-between">
+            <nav class="col-md-6 my-1"" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a onclick="cargarPrincipal();" style="cursor: pointer;">Inicio</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a onclick="cargarSeccionVentas();" style="cursor: pointer;">Ventas</a>
+                    </li>
+                    <li class="breadcrumb-item active" style="cursor: pointer;">Ventas de Productos</li>
+                </ol>
+            </nav>
+        </div> <!-- Fin migajas de Pan y botón-->
+    </div> <!-- Fin de contenido-->
+
+    <!--Inicio de la parte de la tabla-->
+    <div class="container-fluid card mx-auto border-bottom" style="display: block;">
+        <!--Inicio de zona de búsqueda y filtro-->
+        <!-- Inicio de zona de búsqueda -->
+        <div class="row">
+            <div class="col-sm-6 col-md-6 mt-2 mb-2">
+                <input type="text" placeholder="Buscar" name="txtBusqueda" id="txtBusqueda" class="form-control">
+            </div>
+            <div class="col-sm-6 col-md-6 mt-2 mb-2">
+                <button class="btn btn-outline-primary btn-lg w-75" id="btnBuscar" 
+                        data-toggle="collapse" data-target="#collapseProductos" aria-expanded="false" aria-controls="collapseExample"
+                        onclick="moduloVentaProductos.mostrarCampoBusqueda();"><i class="fa-solid fa-magnifying-glass"></i> Buscar
+                </button>
+            </div>
+        </div> <!--Fin de zona de búsqueda y filtro-->
+
+        <!--Inicio de encabezado de tabla-->
+        <div class="row">
+            <div class="col-12">
+                <div class="collapse" id="collapseProductos">
+                    <div class="card mb-2" id="productos">
+                        <div class="card-header" style="background-color: #112A45; color: white">
+                            <div class="col-12">
+                                <i class="fa-solid fa-cart-shopping"></i> Productos
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table" id="tablaProductos">
+                                    <thead style="background-color: #112A45; color: white">
+                                        <tr>
+                                            <th>Codigo de barras</th>
+                                            <th>Nombre</th>
+                                            <th>Precio de venta</th>
+                                            <th>Existencias</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tblProductos">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div> <!--Fin de encabezado de tabla-->
+
+        <!--Inicio de tabla productos-->
+
+
+    </div> <!--Fin de tabla productos-->
+
+
+
+    <div class="container-fluid card my-3 border-bottom">
+
+        <!--Inicio de encabezado de tabla-->
+        <div class="row">
+            <div class="col-12 mt-2 mb-2">
+                <div class="card">
+                    <div class="card-header" style="background-color: #112A45; color: white">
+                        <div class="col-12">
+                            <i class="fa-solid fa-cart-shopping"></i> Encabezado
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <label class="form-label" for="selecEmpleado">Empleado: </label>
+                        <select class="form-select" name="selectEmpleado" id="selectEmpleado" onchange="moduloVentaProductos.actualizarBotones();">
+                            <option value="" disabled="">Selecciona al empleado</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-2 mb-3">
+                <div class="card">
+                    <div class="card-header" style="background-color: #112A45; color: white">
+                        <div class="col-12">
+                            <i class="fa-solid fa-cart-shopping"></i> Detalles
+                        </div>
+                    </div>
+                    <div class="card-body" id="ventaProductos">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead style="background-color: #112A45; color: white">
+                                    <tr>
+                                        <th>Codigo de barras</th>
+                                        <th>Nombre</th>
+                                        <th>Precio unitario</th>
+                                        <th>Cantidad</th>
+                                        <th>Descuento</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblVentaProductos">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-2 mb-3">
+                <div class="card">
+                    <div class="card-header" style="background-color: #112A45; color: white">
+                        <div class="col-12">
+                            <i class="fa-solid fa-cart-shopping"></i> Total
+                        </div>
+                    </div>
+                    <div class="card-body" id="totalVenta">
+                        <div class="row">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="totalProductos">Productos: </label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="totalProductos" name="totalProductos" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="subtotalCosto">Subtotal: </label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="subtotalCosto" name="subtotalCosto" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="descuentoCosto">Descuento: </label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="descuentoCosto" name="descuentoCosto" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 mr-auto" >
+                                <label class="form-label" for="totalCosto">Total: </label>
+
+                            </div>
+                            <div class="col-sm-6 mr-auto">
+                                <input type="text" id="totalCosto" name="totalCosto" disabled>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div> <!--Fin de encabezado de tabla-->
+
+        <div class="row">
+            <div class="col-6 mt-2 mb-2">
+                <button class="btn btn-outline-success btn-lg w-75" id="btnSave" 
+                        onclick="moduloVentaProductos.agregarCompra();"><i class="fa-solid fa-floppy-disk"></i> Guardar
+                </button>
+            </div>
+            <div class="col-6 mt-2 mb-2">
+                <button class="btn btn-outline-primary btn-lg w-75" id="btnClean" 
+                        onclick="moduloVentaProductos.limpiar();"><i class="fa-solid fa-eraser"></i> Limpiar
+                </button>
+            </div>
+        </div>
+
+        <!--Inicio de tabla productos-->
+
+
+    </div> <!--Fin de tabla productos-->
+    <!--JavaScript-->
+    <script src="../js/main.js"></script>
+</main>
