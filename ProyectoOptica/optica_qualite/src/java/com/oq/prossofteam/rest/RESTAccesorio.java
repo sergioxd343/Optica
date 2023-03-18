@@ -22,19 +22,19 @@ import java.util.List;
 @Path("accesorio")
 public class RESTAccesorio {
 
-    @GET
+    @POST
     @Path("getAll")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAll(@QueryParam("filtro") @DefaultValue("") String filtro,
-                           @QueryParam("showDeleted") @DefaultValue("false") boolean showDeleted) {
+    public Response getAll(@FormParam("filtro") @DefaultValue("") String filtro,
+                           @FormParam("showDeleted") @DefaultValue("false") boolean showDeleted) {
         String out = null;
         ControllerAccesorio ca = null;
-
-        List<Accesorio> accesorios = null;
+        
+        List<Accesorio> accesorio = null;
         try {
             ca = new ControllerAccesorio();
-            accesorios = ca.getAll(filtro, showDeleted);
-            out = new Gson().toJson(accesorios);
+            accesorio = ca.getAll(filtro, showDeleted);
+            out = new Gson().toJson(accesorio);
         } catch (Exception e) {
             e.printStackTrace();
             out = "{\"exception\":\"Error interno del servidor.\"}";

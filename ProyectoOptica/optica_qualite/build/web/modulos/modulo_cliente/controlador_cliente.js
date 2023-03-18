@@ -172,19 +172,32 @@ export function eliminarCliente() {
 }
 
 export function refrescarTabla() {
-    //let url = "api/empleado/getAll?token=" + currentUser.usuario.lastToken;
+    let datos = null;
+    let param = null;
+//let url = "api/empleado/getAll?token=" + currentUser.usuario.lastToken;
     let showInactivos;
     if (document.getElementById("radActivo").checked) {
         showInactivos = false;
     } else if (document.getElementById("radInactivo").checked) {
         showInactivos = true;
     }
+    let lastToken = localStorage.getItem("lastToken");
+    let rol = localStorage.getItem("rol");
     let filtro = document.getElementById("txtBusqueda").value;
-    let url = "api/cliente/getAll?filtro=" + filtro + "&showDeleted=" + showInactivos;
-    fetch(url)
-            .then(response => {
-                return response.json();
-            })
+    datos = {
+        filtro: filtro,
+        showDeleted: showInactivos,
+        token: lastToken
+    };
+    param = new URLSearchParams(datos);
+    fetch("api/cliente/getAll",
+            {
+                method: "POST",
+                headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'},
+                body: param
+            }).then(response => {
+        return response.json();
+    })
             .then(function (data)
             {
                 if (data.exception != null)
@@ -199,14 +212,28 @@ export function refrescarTabla() {
                     Swal.fire('', data.error, 'warning');
                     return;
                 }
-                if (data.errorsec != null)
-                {
-                    Swal.fire('', data.errorsec, 'error');
-                    alert("Regresando al index por error");
-                    window.location.replace('index.html');
+                if (data.errorperm != null){
+                    Swal.fire('Error', data.errorperm, 'error');
                     return;
                 }
-                //alert('cargando tabla despues del fetch...');
+                if (data.errorsec != null)
+                {
+                    localStorage.clear();
+                    Swal.fire({
+                        title: 'Token incorrecto',
+                        text: data.errorsec,
+                        icon: 'error',
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'Iniciar sesion'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            console.log(data);
+                            alert("consola");
+                            window.location = "index.html";
+                        }
+                    });
+                    return;
+                }
                 cargarTabla(data);
             });
 }

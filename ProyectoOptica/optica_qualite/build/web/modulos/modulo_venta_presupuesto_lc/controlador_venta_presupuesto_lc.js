@@ -499,7 +499,6 @@ export function cargarDatosLC(index)
         document.getElementById("txtDescuento").value = 0;
 
         document.getElementById("btnSaveLC").disabled = false;
-        document.getElementById("btnCleanLC").disabled = false;
     }
 
 

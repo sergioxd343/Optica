@@ -92,31 +92,8 @@ public class ControllerTipoMica {
 
     public String armarConsultaSQL(String filtro) {
         // String = utlizar LIKE
-        String sql = "SELECT * FROM v_tipo_micas";
-        String sqlWhere = "";
-
-        // Revisamos que el filtro no sea nulo y no este vacío
-        if (filtro != null && !filtro.trim().equals("")) {
-            sqlWhere += " WHERE (CAST(idTipoMica AS CHAR) = ? OR "
-                    + "nombre LIKE ? OR "
-                    + "CAST(precioCompra AS CHAR) = ? OR "
-                    + "CAST(precioVenta AS CHAR) = ?)";
-//            if (!showDeleted) {
-//                sqlWhere = sqlWhere
-//                        + " AND estatus = 1";
-//            } else {
-//                sqlWhere = sqlWhere
-//                        + " AND estatus = 0";
-//            }
-        } else {
-//            if (!showDeleted) {
-//                sqlWhere = " WHERE estatus = 1";
-//            } else {
-//                sqlWhere = " WHERE estatus = 0";
-//            }
-            // sqlWhere = (showDeleted ? "" : " WHERE estatus = 1");
-        }
-        sql = sql + sqlWhere;
+        String sql = "SELECT * FROM tipo_mica";
+        
 
         return sql;
     }
@@ -150,14 +127,9 @@ public class ControllerTipoMica {
         
         System.out.println(sql);
         
-        if (filtro != null && !filtro.trim().equals("")) {
-            pstmt.setString(1, "%"+filtro+"%");
-            pstmt.setString(2, "%"+filtro+"%");
-            pstmt.setString(3, "%"+filtro+"%");
-            pstmt.setString(4, "%"+filtro+"%");
-        }
         
-        rs = pstmt.executeQuery();
+        
+        rs = pstmt.executeQuery(sql);
 
         while (rs.next()) {
             tiposMicas.add(fill(rs));

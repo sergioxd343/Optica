@@ -22,18 +22,18 @@ import java.util.List;
 @Path("solucion")
 public class RESTSolucion {
 
-    @GET
+    @POST
     @Path("getAll")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAll(@QueryParam("filtro") @DefaultValue("") String filtro,
-                           @QueryParam("showDeleted") @DefaultValue("false") boolean showDeleted) {
+    public Response getAll(@FormParam("filtro") @DefaultValue("") String filtro,
+                           @FormParam("showDeleted") @DefaultValue("false") boolean showDeleted) {
         String out = null;
-        ControllerSolucion cs = null;
+        ControllerSolucion ca = null;
         
         List<Solucion> soluciones = null;
         try {
-            cs = new ControllerSolucion();
-            soluciones = cs.getAll(filtro, showDeleted);
+            ca = new ControllerSolucion();
+            soluciones = ca.getAll(filtro, showDeleted);
             out = new Gson().toJson(soluciones);
         } catch (Exception e) {
             e.printStackTrace();

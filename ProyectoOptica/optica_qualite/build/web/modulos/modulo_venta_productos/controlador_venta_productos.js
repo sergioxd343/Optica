@@ -145,7 +145,6 @@ export function agregarCompra()
                         Swal.fire('Realizado', data.response, 'success');
                     }
                     //alert('cargando tabla despues del fetch...');
-                    buscarEmpleado();
                     limpiar();
                     actualizarTablaVenta();
                     actualizarBotones();
@@ -177,7 +176,7 @@ export function limpiar()
     productosEnCompra.splice(0, productosEnCompra.length);
     actualizarTablaVenta();
     refrescarTabla();
-    buscarEmpleado();
+    
     actualizarBotones();
     actualizarTotalVenta();
 }
