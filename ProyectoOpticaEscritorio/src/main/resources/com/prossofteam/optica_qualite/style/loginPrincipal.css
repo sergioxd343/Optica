@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Montserrat';
+     src: url ('C:\Users\josam\IdeaProjects\Recursos\Fuentes\Montserrat\Montserrat-VariableFont_wght.TTF');
+}
+
+.root {
+    -fx-focus-color: #ffffff;
+}
+
+.border-pane {
+    -fx-background-color: #ffffff;
+}
+
+.header {
+    -fx-background-color: #BC116B;
+}
+
+#tab-pane-left {
+    -fx-tab-min-width: 90px;
+    -fx-background-color: #f5f5f5;
+}
+
+
+.tab-pane {
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Montserrat";
+    -fx-tab-min-width: 80px;
+}
+
+.tab-header-background {
+    -fx-background-color: #BC116B;
+}
+
+.tab {
+    -fx-padding: 3 6 3 6;
+    -fx-border-width: 0.4;
+    -fx-border-radius: 10px;
+    -fx-background-color: #BC116B;
+    -fx-translate-y: 1;
+}
+
+.tab .tab-label {
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 13px;
+    -fx-text-fill: #ffffff;
+}
+
+.tab:selected {
+    -fx-padding 3 0 3 5;
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent;
+    -fx-translate-y: 1;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #572F4E;
+    -fx-font-weight: bold;
+}
+
+.table-view {
+    -fx-background-color: #F8F2F7;
+    -fx-background-radius: 0 0 10px 10px;
+    -fx-size: 60;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #572E4F;
+    -fx-background-radius: 7px 7px 7px 7px;
+    -fx-background-insets: 0 11px 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: #572E4F;
+    -fx-background-radius: 10px 10px 0 0;
+    -fx-padding: 5px 4px 5px 4px;
+}
+
+.table-view .label {
+    -fx-text-fill: #f5f5f5;
+    -fx-font-family: "Montserrat";
+    -fx-font-weight: 600;
+    -fx-font-size: 1.|em;
+}
+
+.table-row-cell: hover {
+    -fx-background-color: #B26CA3;
+    -fx-text-fill: #f5f5f5;
+}
+
+.pane {
+    -fx-background-color: #f5f5f5;
+}
+
+.text-field {
+    -fx-border-color: #b26ca3;
+    -fx-background-color: #ffffff;
+    -fx-border-width: 0 0 2 0;
+    -fx-prompt-text-fill: #b26ca3;
+    -fx-font-width: 400;
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 15px;
+}
+
+.text-field:hover {
+    -fx-text-width: 500;
+    -fx-prompt-text-fill: #333333;
+    -fx-opacity: 1;
+    -fx-background-color: #eeeeee;
+    -fx-border-color: #BD1E62;
+}
+
+.button {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #f5f5f5;
+}
+
+.button:hover {
+    -fx-translate-x: -.5px;
+    -fx-translate-y: -.5px;
+    -fx-effect: dropshadow(two-pass-box, #888888, 10, .4, 3, 2);
+}
+
+.save {
+    -fx-background-color: #40A431;
+}
+
+.save:hover {
+    -fx-background-color: #437F3A;
+}
+
+.clean {
+    -fx-background-color: #329BC4;
+}
+
+.clean:hover {
+    -fx-background-color: #1F6C8A;
+}
+
+.delete {
+    -fx-background-color: #C71C2A;
+}
+
+.delete:hover {
+    -fx-background-color: #B31926;
+}

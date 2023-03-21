@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="700.0" style="-fx-background-color: #D62957;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.utl.dsm.optica.dsm404optica.ControllerLogin">
+   <center>
+      <AnchorPane fx:id="" maxHeight="440.0" maxWidth="640.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-color: #F5F5F5; -fx-border-radius: 10; -fx-border-width: .2em;" styleClass="label" stylesheets="@style/loginStyle.css" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow offsetX="5.0" offsetY="6.0" radius="12.25" width="30.0">
+               <color>
+                  <Color red="0.5473684072494507" green="0.05068226158618927" blue="0.18313190340995789" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <ImageView fitHeight="145.0" fitWidth="186.0" layoutX="247.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/QUALITE-COL-VER-WHT.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtUsuario" layoutX="227.0" layoutY="186.0" promptText="Nombre de usuario" styleClass="txt">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnLogin" layoutX="127.0" layoutY="359.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#validarUsuario" prefWidth="100.0" text="Acceder">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnExit" layoutX="413.0" layoutY="359.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#cerrarAplicacion" prefWidth="100.0" text="Salir">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="txtPassword" layoutX="227.0" layoutY="278.0" promptText="Contraseña" styleClass="txt">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

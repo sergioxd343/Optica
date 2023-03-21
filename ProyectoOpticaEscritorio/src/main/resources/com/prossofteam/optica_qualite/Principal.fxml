@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@style/loginPrincipal.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="43.0" prefWidth="900.0" styleClass="header" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="270.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/QUALITE%20MONO-HOR-PRL-PINK.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab closable="false" text="Inicio">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane layoutX="350.0" layoutY="148.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <ImageView fitHeight="355.0" fitWidth="355.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@images/QUALITE-COL-VER-WHT.png" />
+                                 </image>
+                              </ImageView>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Empleados">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <bottom>
+                              <TableView fx:id="tblEmpleados" prefHeight="200.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn fx:id="colIdEmpleado" maxWidth="2000.0" prefWidth="75.0" text="Id" />
+                                  <TableColumn fx:id="colNombreEmpleado" prefWidth="75.0" text="Nombre" />
+                                    <TableColumn fx:id="colApellidoPaternoEmpleado" prefWidth="75.0" text="Apellido Paterno" />
+                                    <TableColumn fx:id="colApellidoMaternoEmpleado" prefWidth="75.0" text="Apellido Materno" />
+                                    <TableColumn fx:id="colGeneroEmpleado" prefWidth="75.0" text="Genero" />
+                                    <TableColumn fx:id="colRFCEmpleado" prefWidth="75.0" text="RFC" />
+                                    <TableColumn fx:id="colTelefonoCasaEmpleado" prefWidth="75.0" text="Telefono Casa" />
+                                    <TableColumn fx:id="colTelefonoMovilEmpleado" prefWidth="75.0" text="Telefono Movil" />
+                                    <TableColumn fx:id="colCorreoEmpleado" prefWidth="75.0" text="Correo Electronico" />
+                                    <TableColumn fx:id="colEstatusEmpleado" maxWidth="3000.0" prefWidth="75.0" text="Estatus" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <BorderPane.margin>
+                                    <Insets />
+                                 </BorderPane.margin>
+                              </TableView>
+                           </bottom>
+                           <center>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="266.0" prefWidth="900.0" style="-fx-background-color: transparent;" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+                                      <content>
+                                        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="806.0" style="-fx-background-color: transparent;">
+                                             <children>
+                                                <GridPane hgap="40.0" prefHeight="370.0" prefWidth="834.0" style="-fx-background-color: #ffffff;" vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <TextField fx:id="txtNombre" promptText="Nombre" />
+                                                      <TextField fx:id="txtApellidoPaterno" promptText="Apellido Paterno" GridPane.columnIndex="1" />
+                                                      <TextField fx:id="txtApellidoMaterno" promptText="Apellido Materno" GridPane.columnIndex="2" />
+                                                      <ComboBox fx:id="cmbGenero" minWidth="200.0" prefWidth="500.0" promptText="Genero" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="txtRFC" promptText="RFC" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="txtFechaNac" promptText="Fecha de nacimiento" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="txtCalle" promptText="Calle" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="txtNumDireccion" promptText="Numero" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="txtColonia" promptText="Colonia" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="txtCodigoPostal" promptText="Codigo Postal" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="txtCiudad" promptText="Ciudad" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                                      <ComboBox fx:id="cmbEstado" minWidth="200.0" prefWidth="500.0" promptText="Estado" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="txtTelefonoMovil" promptText="Telefono Movil" GridPane.rowIndex="6" />
+                                                      <TextField fx:id="txtTelefonoCasa" promptText="Telefono Casa" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <TextField fx:id="txtCorreoElectronico" promptText="Correo Electronico" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                                      <TextField fx:id="txtUsuario" promptText="Usuario" GridPane.rowIndex="8" />
+                                                      <TextField fx:id="txtContrasenia" promptText="Contraseña" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                      <ComboBox fx:id="cmbRol" minWidth="250.0" prefWidth="500.0" promptText="Rol" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                                                      <TextField fx:id="txtIdEmpleado" promptText="idEmpleado" visible="false" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="txtIdPersonaEmp" promptText="idPersona" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="txtNUE" promptText="numero unico" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" top="10.0" />
+                                                   </padding>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <padding>
+                                          <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+                                       </padding>
+                                    </ScrollPane>
+                                    <HBox alignment="CENTER" maxHeight="60.0" prefHeight="100.0" prefWidth="200.0" spacing="80.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Button fx:id="btnGuardarEmpleado" mnemonicParsing="false" styleClass="save" text="Guardar">
+                                             <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/floppy-disk-solid.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="btnLimpiarEmpleado" mnemonicParsing="false" styleClass="clean" text="Limpiar">
+                                             <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="save">
+                                                   <image>
+                                                      <Image url="@images/eraser-solid.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="btnEliminarEmpleado" mnemonicParsing="false" styleClass="delete" text="Eliminar">
+                                             <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/trash-solid.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin></HBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Clientes">
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <fx:include source="Clientes.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </AnchorPane>
+            </Tab>
+            <Tab text="Productos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane layoutX="350.0" layoutY="148.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <TabPane id="tab-pane-left" prefHeight="497.0" prefWidth="901.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                <tabs>
+                                  <Tab text="Armazones">
+                                      <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <bottom>
+                                                      <TableView fx:id="tblArmazon" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <columns>
+                                                            <TableColumn fx:id="colCodigoArmazon" maxWidth="4000.0" prefWidth="75.0" text="Código" />
+                                                            <TableColumn fx:id="colNombreArmazon" prefWidth="75.0" text="Nombre" />
+                                                            <TableColumn fx:id="colMarcaArmazon" prefWidth="75.0" text="Marca" />
+                                                            <TableColumn fx:id="colModeloArmazon" prefWidth="75.0" text="Modelo" />
+                                                            <TableColumn fx:id="colColorArmazon" prefWidth="75.0" text="Color" />
+                                                            <TableColumn fx:id="colPrecioArmazon" prefWidth="75.0" text="Precio" />
+                                                            <TableColumn fx:id="colExistenciasArmazon" prefWidth="75.0" text="Existencias" />
+                                                            <TableColumn fx:id="colDimensionArmazon" prefWidth="75.0" text="Dimensiones" />
+                                                            <TableColumn fx:id="colFotografiaArmazon" prefWidth="75.0" text="Fotografia" />
+                                                            <TableColumn fx:id="colEstatusArmazon" maxWidth="3000.0" prefWidth="75.0" text="Estatus" />
+                                                         </columns>
+                                                         <columnResizePolicy>
+                                                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                         </columnResizePolicy>
+                                                      </TableView>
+                                                   </bottom>
+                                                   <center>
+                                                      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="266.0" prefWidth="900.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                                                               <content>
+                                                                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="806.0" style="-fx-background-color: transparent;">
+                                                                     <children>
+                                                                        <GridPane alignment="TOP_CENTER" hgap="40.0" layoutY="72.0" prefHeight="526.0" prefWidth="806.0" style="-fx-background-color: #ffffff;" vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <TextField fx:id="txtNombreArmazon" promptText="Nombre" />
+                                                                              <TextField fx:id="txtMarcaArmazon" promptText="Marca" GridPane.columnIndex="1" />
+                                                                              <TextField fx:id="txtModeloArmazon" promptText="Modelo" GridPane.columnIndex="2" />
+                                                                              <TextField fx:id="txtPrecioVentaArmazon" promptText="Precio de venta" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                              <TextField fx:id="txtColorArmazon" promptText="Color" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="txtPrecioCompraArmazon" promptText="Precio de compra" GridPane.rowIndex="2" />
+                                                                              <TextField fx:id="txtDimensionArmazon" promptText="Dimensiones" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="txtFotografiaArmazon" promptText="Fotografia" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="txtIdProductoArmazon" promptText="idProducto" visible="false" GridPane.rowIndex="3" />
+                                                                              <TextField fx:id="txtIdArmazon" promptText="idArmazon" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                              <TextField fx:id="txtCodigoBarrasArmazon" promptText="CodigoBarras" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                                              <TextField fx:id="txtExistenciasArmazon" promptText="Existencias" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                                           </children>
+                                                                           <padding>
+                                                                              <Insets bottom="20.0" top="10.0" />
+                                                                           </padding>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                               <padding>
+                                                                  <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+                                                               </padding>
+                                                            </ScrollPane>
+                                                            <HBox alignment="CENTER" maxHeight="60.0" prefHeight="100.0" prefWidth="200.0" spacing="80.0" style="-fx-background-color: transparent;">
+                                                               <children>
+                                                                  <Button fx:id="btnGuardarArmazon" mnemonicParsing="false" styleClass="save" text="Guardar">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@images/floppy-disk-solid.png" />
+                                                                           </image>
+                                                                           <viewport>
+                                                                              <Rectangle2D />
+                                                                           </viewport>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </Button>
+                                                                  <Button fx:id="btnLimpiarArmazon" mnemonicParsing="false" styleClass="clean" text="Limpiar">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="save">
+                                                                           <image>
+                                                                              <Image url="@images/eraser-solid.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </Button>
+                                                                  <Button fx:id="btnEliminarArmazon" mnemonicParsing="false" styleClass="delete" text="Eliminar">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@images/trash-solid.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" top="5.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </center>
+                                                </BorderPane>
+                                             </children></AnchorPane>
+                                      </content>
+                                  </Tab>
+                                  <Tab text="Accesorios">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <bottom>
+                                                      <TableView fx:id="tblAccesorio" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <columns>
+                                                            <TableColumn fx:id="colCodigoAccesorio" maxWidth="4000.0" prefWidth="75.0" text="Código" />
+                                                            <TableColumn fx:id="colNombreAccesorio" prefWidth="75.0" text="Nombre" />
+                                                            <TableColumn fx:id="colMarcaAccesorio" prefWidth="75.0" text="Marca" />
+                                                            <TableColumn fx:id="colModeloAccesorio" prefWidth="75.0" text="Modelo" />
+                                                            <TableColumn fx:id="colExistenciasAccesorio" prefWidth="75.0" text="Existencias" />
+                                                            <TableColumn fx:id="colPrecioAccesorio" prefWidth="75.0" text="Precio" />
+                                                            <TableColumn fx:id="colEstatusAccesorio" maxWidth="3000.0" prefWidth="75.0" text="Estatus" />
+                                                         </columns>
+                                                         <columnResizePolicy>
+                                                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                         </columnResizePolicy>
+                                                      </TableView>
+                                                   </bottom>
+                                                   <center>
+                                                      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="266.0" prefWidth="900.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                                                               <content>
+                                                                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="806.0" style="-fx-background-color: transparent;">
+                                                                     <children>
+                                                                        <GridPane alignment="TOP_CENTER" hgap="40.0" layoutY="72.0" prefHeight="526.0" prefWidth="806.0" style="-fx-background-color: #ffffff;" vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <TextField fx:id="txtNombreAccesorio" promptText="Nombre" />
+                                                                              <TextField fx:id="txtMarcaAccesorio" promptText="Marca" GridPane.columnIndex="1" />
+                                                                              <TextField fx:id="txtModeloAccesorio" promptText="Modelo" GridPane.columnIndex="2" />
+                                                                              <TextField fx:id="txtPrecioVentaAccesorio" promptText="Precio de venta" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="txtPrecioCompraAccesorio" promptText="Precio de compra" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="txtIdProductoAccesorio" promptText="idProducto" visible="false" GridPane.rowIndex="3" />
+                                                                              <TextField fx:id="txtIdAccesorio" promptText="idAccesorio" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                              <TextField fx:id="txtCodigoBarrasAccesorio" promptText="CodigoBarras" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                                              <TextField fx:id="txtExistenciasAccesorio" promptText="Existencias" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                                           </children>
+                                                                           <padding>
+                                                                              <Insets bottom="20.0" top="10.0" />
+                                                                           </padding>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                               <padding>
+                                                                  <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+                                                               </padding>
+                                                            </ScrollPane>
+                                                            <HBox alignment="CENTER" maxHeight="60.0" prefHeight="100.0" prefWidth="200.0" spacing="80.0" style="-fx-background-color: transparent;">
+                                                               <children>
+                                                                  <Button fx:id="btnGuardarAccesorio" mnemonicParsing="false" styleClass="save" text="Guardar">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@images/floppy-disk-solid.png" />
+                                                                           </image>
+                                                                           <viewport>
+                                                                              <Rectangle2D />
+                                                                           </viewport>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </Button>
+                                                                  <Button fx:id="btnLimpiarAccesorio" mnemonicParsing="false" styleClass="clean" text="Limpiar">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="save">
+                                                                           <image>
+                                                                              <Image url="@images/eraser-solid.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </Button>
+                                                                  <Button fx:id="btnEliminarAccesorio" mnemonicParsing="false" styleClass="delete" text="Eliminar">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@images/trash-solid.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" top="5.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </center>
+                                                </BorderPane>
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab text="Soluciones">
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                         <fx:include source="Soluciones.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        </AnchorPane>
+                                    </Tab>
+                                    <Tab text="Lentes de contacto">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <bottom>
+                                                      <TableView fx:id="tblLenteContacto" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <columns>
+                                                            <TableColumn fx:id="colCodigoLenteContacto" maxWidth="4000.0" prefWidth="75.0" text="Código" />
+                                                            <TableColumn fx:id="colNombreLenteContacto" prefWidth="75.0" text="Nombre" />
+                                                            <TableColumn fx:id="colMarcaLenteContacto" prefWidth="75.0" text="Marca" />
+                                                            <TableColumn fx:id="colModeloLenteContacto" prefWidth="75.0" text="Modelo" />
+                                                            <TableColumn fx:id="colExistenciasLenteContacto" prefWidth="75.0" text="Existencias" />
+                                                            <TableColumn fx:id="colPrecioLenteContacto" prefWidth="75.0" text="Precio" />
+                                                            <TableColumn fx:id="colQueratometriaLenteContacto" prefWidth="75.0" text="Queratometria" />
+                                                            <TableColumn fx:id="colFotografiaLenteContacto" prefWidth="75.0" text="Fotografia" />
+                                                            <TableColumn fx:id="colEstatusLenteContacto" maxWidth="3000.0" prefWidth="75.0" text="Estatus" />
+                                                         </columns>
+                                                         <columnResizePolicy>
+                                                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                         </columnResizePolicy>
+                                                      </TableView>
+                                                   </bottom>
+                                                   <center>
+                                                      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="266.0" prefWidth="900.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                                                               <content>
+                                                                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="806.0" style="-fx-background-color: transparent;">
+                                                                     <children>
+                                                                        <GridPane alignment="TOP_CENTER" hgap="40.0" layoutY="72.0" prefHeight="526.0" prefWidth="806.0" style="-fx-background-color: #ffffff;" vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <TextField fx:id="txtNombreLenteContacto" promptText="Nombre" />
+                                                                              <TextField fx:id="txtMarcaLenteContacto" promptText="Marca" GridPane.columnIndex="1" />
+                                                                              <TextField fx:id="txtModeloLenteContacto" promptText="Modelo" GridPane.columnIndex="2" />
+                                                                              <TextField fx:id="txtPrecioVentaLenteContacto" promptText="Precio de venta" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="txtPrecioCompraLenteContacto" promptText="Precio de compra" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="txtIdProductoLenteContacto" promptText="idProducto" visible="false" GridPane.rowIndex="3" />
+                                                                              <TextField fx:id="txtIdLenteContacto" promptText="idLenteContacto" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                              <TextField fx:id="txtCodigoBarrasLenteContacto" promptText="CodigoBarras" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                                              <TextField fx:id="txtExistenciasLenteContacto" promptText="Existencias" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="txtQueratometriaLenteContacto" promptText="Queratometria" GridPane.rowIndex="2" />
+                                                                              <TextField fx:id="txtFotografiaLenteContacto" promptText="Fotografia" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                           </children>
+                                                                           <padding>
+                                                                              <Insets bottom="20.0" top="10.0" />
+                                                                           </padding>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                               <padding>
+                                                                  <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+                                                               </padding>
+                                                            </ScrollPane>
+                                                            <HBox alignment="CENTER" maxHeight="60.0" prefHeight="100.0" prefWidth="200.0" spacing="80.0" style="-fx-background-color: transparent;">
+                                                               <children>
+                                                                  <Button fx:id="btnGuardarLenteContacto" mnemonicParsing="false" styleClass="save" text="Guardar">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@images/floppy-disk-solid.png" />
+                                                                           </image>
+                                                                           <viewport>
+                                                                              <Rectangle2D />
+                                                                           </viewport>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </Button>
+                                                                  <Button fx:id="btnLimpiarLenteContacto" mnemonicParsing="false" styleClass="clean" text="Limpiar">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="save">
+                                                                           <image>
+                                                                              <Image url="@images/eraser-solid.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </Button>
+                                                                  <Button fx:id="btnEliminarLenteContacto" mnemonicParsing="false" styleClass="delete" text="Eliminar">
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@images/trash-solid.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" top="5.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </center>
+                                                </BorderPane>
+                                             </children></AnchorPane>
+                                      </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

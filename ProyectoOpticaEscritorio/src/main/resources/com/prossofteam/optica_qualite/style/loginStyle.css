@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Montserrat';
+         src: url ('C:\Users\josam\IdeaProjects\Recursos\Fuentes\Montserrat\Montserrat-VariableFont_wght.TTF');
+}
+
+.txt {
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 15;
+    -fx-border-color: #572e4f;
+    -fx-border-width: 0 0 2 0 ;
+    -fx-background-color: #ffffff;
+}
+.txt:hover {
+    -fx-border-color: #d62957;
+    -fx-effect: dropshadow(three-pass-box, #eeeeee, 1, .1, 5, -5);
+}
+
+.button {
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 15;
+    -fx-background-color: #f5f5f5;
+    -fx-effect: dropshadow(two-pass-box, #E26687, 2, .2, 4, 4);
+
+}
+
+.button:hover {
+    -fx-background-color: #AB546B;
+    -fx-text-fill: #f5f5f5;
+    -fx-effect: dropshadow(two-pass-box, #F6D1DB, 2, .2, 4, 4);
+    -fx-translate-y: -.4px;
+    -fx-translate-x: -.2px
+}
+
+.button:pressed {
+    -fx-background-color: #AB546B;
+    -fx-text-fill: #f5f5f5;
+    -fx-effect: dropshadow(two-pass-box, #F6D1DB, 2, .2, 4, 4);
+    -fx-translate-y: -.8px;
+    -fx-translate-x: -.6px
+}
